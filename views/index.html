@@ -27,6 +27,15 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <title>Gabrielly Vitoria - Semi Joias</title>
+    <style>
+      .slide {
+        display: none;
+      }
+
+      .slide.first {
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -58,11 +67,9 @@
         <a href="">CUIDADOS</a>
       </div>
       <!---->
-
       <div class="search-mobile">
         <input type="search" class="search-input" placeholder="Buscar" />
         <!-- Search input field -->
-
         <div class="dropdown">
           <button
             class="btn btn-secondary dropdown-toggle"
@@ -90,6 +97,75 @@
       </div>
     </header>
 
-    <script src="js/mobile-menu.js"></script>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide first">
+          <img src="images/banner1.webp" alt="imagem 1" />
+        </div>
+        <div class="slide">
+          <img src="images/banner2.webp" alt="imagem 2" />
+        </div>
+        <div class="slide">
+          <img src="images/banner1.webp" alt="imagem 3" />
+        </div>
+        <div class="slide">
+          <img src="images/banner2.webp" alt="imagem 4" />
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="sobre">
+      <div class="section-div">
+        <!-- Card 1 -->
+        <div class="section-div-card frete">
+          <img
+            decoding="async"
+            src="images/truck.png"
+            alt="imagem do card 1 html e css"
+          />
+          <h3>FRETE FIXO DE R$19,99 PARA TODO O BRASIL</h3>
+          <p>Frete grátis nos pedidos acima de R$199,99</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="section-div-card">
+          <img
+            decoding="async"
+            src="images/store.png"
+            alt="imagem do card 2 html e css"
+          />
+          <h3>TEMOS CUPOM PARA PRIMEIRA COMPRA</h3>
+          <p>use PRIMEIROPEDIDO</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="section-div-card">
+          <img
+            decoding="async"
+            src="images/label.png"
+            alt="imagem do card 3 html e css"
+          />
+          <h3>COMPRE COM SEGURANÇA</h3>
+          <p>Seus dados sempre protegidos</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".slide");
+        let index = 0;
+
+        function changeImage() {
+          images.forEach((image) => {
+            image.classList.remove("first");
+          });
+          index = (index + 1) % images.length;
+          images[index].classList.add("first");
+        }
+
+        setInterval(changeImage, 3000); // Muda a imagem a cada 2 segundos
+      });
+    </script>
   </body>
 </html>
