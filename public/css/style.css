@@ -114,6 +114,7 @@ header .logo img {
 .search-mobile {
   display: none;
 }
+
 @media screen and (max-width: 740px) {
   .search-mobile {
     display: flex;
@@ -129,12 +130,25 @@ header .logo img {
     background-size: 20px; /* tamanho do ícone */
     background-repeat: no-repeat;
     background-position: 95% center; /* posição do ícone */
-    width: 90%;
+    width: 60%;
     margin: 20px 5%;
     padding: 5px 13px;
     outline: none;
     border: none;
     border-radius: 20px;
+  }
+  .dropdown {
+    margin: 20px 5% 20px 0;
+    width: 30%;
+  }
+  .dropdown-toggle {
+    width: 90px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: #434f43; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border-color: #ced4da; /* Cor da borda */
   }
   .top-header {
     justify-content: space-evenly;
