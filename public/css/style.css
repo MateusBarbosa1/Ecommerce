@@ -124,7 +124,7 @@ header .logo img {
     width: 14px;
     background-size: contain; /* Ajuste para garantir que o ícone seja visível */
   }
-  .search-mobile input[type="search"] {
+  .search-mobile .search-input {
     background-image: url("../images/search-mobile.png");
     background-size: 20px; /* tamanho do ícone */
     background-repeat: no-repeat;
