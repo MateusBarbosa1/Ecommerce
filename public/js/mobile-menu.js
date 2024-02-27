@@ -17,4 +17,7 @@ buttonClose.addEventListener("click", () => {
     buttonClose.style.display = "none"; // Esconde o botão de fechar
     menu.classList.remove("menu-selected");
   }, 500); // Tempo da animação (0.5s) em milissegundos
+
+  // Impede a propagação do evento para evitar comportamento inesperado
+  event.stopPropagation();
 });
