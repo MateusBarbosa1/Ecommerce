@@ -114,14 +114,14 @@
         <div class="carousel-item active">
           <img
             class="d-block w-100"
-            src="images/banner1.webp"
+            src="images/banner1.jpg"
             alt="First slide"
           />
         </div>
         <div class="carousel-item">
           <img
             class="d-block w-100"
-            src="images/banner2.webp"
+            src="images/banner2.jpg"
             alt="Second slide"
           />
         </div>
@@ -238,7 +238,32 @@
         <p class="valor2">3x DE R$ 6,00</p>
         <button>COMPRAR</button>
       </div>
-      <div class="product">
+    </section>
+    <center class="center-button">
+      <a href="/produtos" class="button-produtos">VER TODOS OS PRODUTOS</a>
+    </center>
+    <h2 style="text-align: center; padding: 2% 0">RELOGIOS</h2>
+
+    <section class="relogios">
+      <div class="relogio">
+        <div class="img-product">
+          <img src="images/image-default.png" alt="" />
+        </div>
+        <p class="product-name">Brincos</p>
+        <h3 class="valor">R$15,99</h3>
+        <p class="valor2">3x DE R$ 6,00</p>
+        <button>COMPRAR</button>
+      </div>
+      <div class="relogio">
+        <div class="img-product">
+          <img src="images/image-default.png" alt="" />
+        </div>
+        <p class="product-name">Brincos</p>
+        <h3 class="valor">R$15,99</h3>
+        <p class="valor2">3x DE R$ 6,00</p>
+        <button>COMPRAR</button>
+      </div>
+      <div class="relogio">
         <div class="img-product">
           <img src="images/image-default.png" alt="" />
         </div>
@@ -249,22 +274,65 @@
       </div>
     </section>
 
+    <div class="instagram">
+      <img src="images/icon-instagram.png" alt="instragram-icon" />
+      <a href="https://www.instagram.com/gabriellyvitoriaacessorios1/"
+        >@gabriellyvitoriaacessorios1</a
+      >
+    </div>
+
+    <footer class="rodape1">
+      <div class="infos-footer">
+        <div class="pagamentos">
+          <h2>FORMAS DE PAGAMENTO</h2>
+          <div class="bandeiras">
+            <img src="images/visa.png" alt="" />
+            <img src="images/mastercard.png" alt="" />
+            <img src="images/elo.png" alt="" />
+            <img src="images/hipercard.png" alt="" />
+            <img src="images/hiper.png" alt="" /><br />
+            <img src="images/american_express.png" alt="" />
+            <img src="images/diners-club.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="contato-footer">
+        <h2>CONTATO</h2>
+        <div class="whatsapp">
+          <span class="material-symbols-outlined"> call </span>
+          <a href="">(81) 98170-1762</a>
+        </div>
+        <div class="email">
+          <span class="material-symbols-outlined"> alternate_email </span>
+          <a href="mailto:gabriellyvitoriasemijoias@gmail.com"
+            >gabriellyvitoriasemijoias@gmail.com</a
+          >
+        </div>
+        <div class="location">
+          <span class="material-symbols-outlined"> location_on </span>
+          <a href="">Rua Ângelo Raimundo de Lucena</a>
+        </div>
+      </div>
+      <div class="redes">
+        <h2>REDES SOCIAIS</h2>
+        <a href="https://www.instagram.com/gabriellyvitoriaacessorios1/"
+          ><img src="images/instagram.png" alt=""
+        /></a>
+        <a href=""><img src="images/tiktok.png" alt="" /></a>
+      </div>
+    </footer>
+
+    <footer class="rodape2">
+      <p>Desenvoldido por</p>
+      <a href="https://www.barbosadev.com.br/"
+        ><img src="images/Barbosa Dev - LOGO TRANSPARENTE.png" alt=""
+      /></a>
+    </footer>
+    <div class="button-absolute">
+      <a href=""><img src="images/whatsapp.png" alt="" /></a>
+    </div>
+
     <script src="js/mobile-menu.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const images = document.querySelectorAll(".slide");
-        let index = 0;
-
-        function changeImage() {
-          images.forEach((image) => {
-            image.classList.remove("first");
-          });
-          index = (index + 1) % images.length;
-          images[index].classList.add("first");
-        }
-
-        setInterval(changeImage, 3000); // Muda a imagem a cada 2 segundos
-      });
-    </script>
+    <script src="js/carousel.js"></script>
   </body>
 </html>

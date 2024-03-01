@@ -14,6 +14,9 @@ header {
   width: 100%;
   z-index: 100;
 }
+span {
+  cursor: pointer;
+}
 .top-header {
   display: flex;
   justify-content: space-around;
@@ -211,14 +214,182 @@ header .logo img {
   background: #434f43;
   color: white;
 }
-
+.product button:hover {
+  margin: 10px 0;
+  width: 50%;
+  padding: 6px 0;
+  border: none;
+  transition: 1s;
+  outline: none;
+  background: #556e55;
+  color: white;
+}
+.center-button {
+  margin: 10px 0 30px 0;
+}
+.center-button .button-produtos {
+  color: white;
+  background-color: #4c6b4c;
+  padding: 10px 40px;
+  font-size: 13px;
+  text-decoration: none;
+}
+.center-button .button-produtos:hover {
+  color: white;
+  background-color: #5c835c;
+  padding: 10px 40px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 1s;
+}
+.relogios {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 3% 10%;
+  justify-content: space-evenly;
+}
+.relogio {
+  border: 1px solid#434f43;
+  width: 22%;
+  text-align: center;
+  padding: 0;
+}
+.relogios button {
+  margin: 10px 0;
+  width: 50%;
+  padding: 6px 0;
+  border: none;
+  outline: none;
+  background: #434f43;
+  color: white;
+}
+.relogios button:hover {
+  margin: 10px 0;
+  width: 50%;
+  padding: 6px 0;
+  border: none;
+  transition: 1s;
+  outline: none;
+  background: #556e55;
+  color: white;
+}
+.instagram {
+  width: 100%;
+  margin: 6% 0;
+  text-align: center;
+}
+.instagram img {
+  width: 30px;
+}
+.instagram a {
+  font-size: 19px;
+  color: black;
+  padding-left: 5px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.rodape1 {
+  background: #434f43;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.infos-footer {
+  text-align: center;
+  width: 33%;
+}
+.pagamentos h2 {
+  color: white;
+  font-size: 17px;
+}
+.bandeiras img {
+  width: 40px;
+}
+.contato-footer {
+  text-align: center;
+  width: 33%;
+}
+.contato-footer h2 {
+  text-align: center;
+  color: white;
+  font-size: 17px;
+}
+.contato-footer span {
+  color: rgb(224, 224, 224);
+  font-size: 15px;
+  padding: 5px 0;
+}
+.contato-footer a {
+  color: rgb(224, 224, 224);
+  font-size: 15px;
+}
+.redes {
+  text-align: center;
+  width: 33%;
+}
+.redes h2 {
+  font-size: 17px;
+  color: white;
+}
+.redes a {
+  padding: 5px;
+}
+.redes img {
+  width: 32px;
+}
 @media screen and (max-width: 970px) {
   .product {
     width: 42%;
   }
+  .relogio {
+    margin: 20px 0;
+    width: 42%;
+  }
+  .rodape1 {
+    justify-content: space-evenly;
+  }
+  .infos-footer {
+    width: 90%;
+  }
+  .contato-footer,
+  .redes {
+    width: 45%;
+    margin-top: 30px;
+  }
 }
-
+.rodape2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rodape2 p {
+  padding-top: 20px;
+}
+.rodape2 img {
+  padding-left: 4px;
+  width: 150px;
+  cursor: pointer;
+}
+.button-absolute {
+  cursor: pointer;
+  position: fixed;
+  top: 90%;
+  left: 93%;
+}
+.button-absolute img {
+  width: 55px;
+}
 @media screen and (max-width: 740px) {
+  .button-absolute {
+    cursor: pointer;
+    position: fixed;
+    top: 90%;
+    left: 88%;
+  }
   .section-div-card {
     display: none;
   }
@@ -330,12 +501,43 @@ header .logo img {
     }
   }
 }
+@media screen and (max-width: 662px) {
+  .rodape1 {
+    padding: 30px 0;
+  }
+  .infos-footer,
+  .contato-footer,
+  .redes {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 480px) {
   .product {
     width: 80%;
   }
+  .relogio {
+    width: 80%;
+  }
+  .instagram a {
+    font-size: 15px;
+  }
+  .button-absolute {
+    cursor: pointer;
+    position: fixed;
+    top: 90%;
+    left: 83%;
+  }
 }
 @media screen and (max-width: 370px) {
+  .button-absolute {
+    cursor: pointer;
+    position: fixed;
+    top: 88%;
+    left: 79%;
+  }
+  .button-absolute img {
+    width: 48px;
+  }
   .section-div-card h3 {
     margin-top: 20px;
     margin-bottom: 0px;
