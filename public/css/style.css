@@ -383,6 +383,29 @@ header .logo img {
 .button-absolute img {
   width: 55px;
 }
+/* PRODUTOS */
+
+.pre-produtos {
+  display: flex;
+  width: 90%;
+  margin: 5% 5% 0 5%;
+  flex-wrap: wrap;
+}
+.pre-produtos .rota {
+  width: 50%;
+}
+.rota h3 {
+  font-size: 19px;
+}
+.pre-produtos .ordenar {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.ordenar span {
+  padding: 5px 10px;
+}
+
 @media screen and (max-width: 740px) {
   .button-absolute {
     cursor: pointer;
@@ -421,7 +444,7 @@ header .logo img {
     border: none;
     border-radius: 20px;
   }
-  .dropdown {
+  header .dropdown {
     margin: 20px 5% 20px 0;
     width: 30%;
   }
@@ -529,6 +552,17 @@ header .logo img {
   }
 }
 @media screen and (max-width: 370px) {
+  .pre-produtos {
+    justify-content: center;
+  }
+  .pre-produtos .rota {
+    width: 90%;
+  }
+  .pre-produtos .ordenar {
+    width: 90%;
+    margin: 30px 0 0 0;
+    justify-content: flex-start;
+  }
   .button-absolute {
     cursor: pointer;
     position: fixed;

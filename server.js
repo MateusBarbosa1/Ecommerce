@@ -14,6 +14,9 @@ app.set("views", path.join(__dirname, "./views"));
 app.get("/", (req, res) => {
   res.render("index");
 });
+app.get("/produtos", (req, res) => {
+  res.render("produtos");
+});
 
 app.listen(3000, () => {
   console.log("server running on port 3000!");
