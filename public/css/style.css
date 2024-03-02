@@ -406,6 +406,17 @@ header .logo img {
   padding: 5px 10px;
 }
 
+.cuidados h2 {
+  text-align: center;
+  padding: 0% 0 3% 0;
+  color: #434f43;
+}
+.content-cuidados {
+  padding: 2% 30% 5% 30%;
+}
+.content-cuidados li {
+  padding: 5px 0;
+}
 @media screen and (max-width: 740px) {
   .button-absolute {
     cursor: pointer;
@@ -533,6 +544,12 @@ header .logo img {
   .redes {
     width: 100%;
   }
+  .cuidados {
+    padding: 9% 0;
+  }
+  .content-cuidados {
+    padding: 4% 10% 5% 10%;
+  }
 }
 @media screen and (max-width: 480px) {
   .product {
@@ -549,6 +566,17 @@ header .logo img {
     position: fixed;
     top: 90%;
     left: 83%;
+  }
+  .pre-produtos {
+    justify-content: center;
+  }
+  .pre-produtos .rota {
+    width: 90%;
+  }
+  .pre-produtos .ordenar {
+    width: 90%;
+    margin: 30px 0 0 0;
+    justify-content: flex-start;
   }
 }
 @media screen and (max-width: 370px) {
