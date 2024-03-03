@@ -121,18 +121,24 @@
     <section class="form-section">
       <form action="" method="post">
         <span>NOME COMPLETO</span>
-        <input type="text" name="nome" placeholder="ex.: Maria da Silva" />
+        <input
+          type="text"
+          name="nome"
+          placeholder="ex.: Maria da Silva"
+          required
+        />
         <span>E-MAIL</span>
         <input
           type="email"
           name="email"
           placeholder="ex.: seuemail@email.com.br"
+          required
         />
         <span>TELEFONE (OPCIONAL)</span>
         <input type="tel" name="telefone" placeholder="ex.: 81 999609643" />
 
         <span>SENHA</span>
-        <input type="password" name="senha" />
+        <input type="password" name="senha" required />
 
         <input type="submit" value="CADASTRE-SE" />
 
