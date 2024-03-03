@@ -417,6 +417,44 @@ header .logo img {
 .content-cuidados li {
   padding: 5px 0;
 }
+.cad-log {
+  display: none;
+  margin: 60px 0;
+}
+.cad-log a {
+  font-size: 12px;
+  margin: 0 10px;
+}
+.form-section {
+  padding: 20px;
+  display: flex;
+  width: 50%;
+  margin: 5% 25%;
+  justify-content: center;
+}
+.form-section form input {
+  outline: none;
+  width: 100%;
+  margin: 15px 0;
+  padding: 5px 5px;
+}
+.form-section form span {
+  padding: 10px 0;
+  font-size: 14px;
+}
+.form-section form input[type="submit"] {
+  border: none;
+  background: #434f43;
+  color: white;
+  padding: 10px 0;
+}
+.form-section form input[type="submit"]:hover {
+  border: none;
+  background: #597259;
+  color: white;
+  transition: 1s;
+  padding: 10px 0;
+}
 @media screen and (max-width: 740px) {
   .button-absolute {
     cursor: pointer;
@@ -501,6 +539,9 @@ header .logo img {
   .menu a {
     padding: 40px 0;
   }
+  .cad-log a {
+    padding: 0;
+  }
   #selected {
     font-weight: bold;
     border-top: none;
@@ -536,6 +577,16 @@ header .logo img {
   }
 }
 @media screen and (max-width: 662px) {
+  .form-section {
+    padding: 20px;
+    display: flex;
+    width: 90%;
+    margin: 5% 5%;
+    justify-content: center;
+  }
+  .form-section p {
+    font-size: 14px;
+  }
   .rodape1 {
     padding: 30px 0;
   }

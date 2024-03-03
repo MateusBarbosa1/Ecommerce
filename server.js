@@ -21,6 +21,13 @@ app.get("/cuidados", (req, res) => {
   res.render("cuidados");
 });
 
+app.get("/cadastrar", (req, res) => {
+  res.render("cadastrar");
+});
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
 app.listen(3000, () => {
   console.log("server running on port 3000!");
 });
