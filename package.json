@@ -4,14 +4,20 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "services:up": "docker compose -f infra/compose.yaml up -d",
+    "services:down": "docker compose -f infra/compose.yaml down",
+    "migrate": "npx prisma migrate dev"
   },
   "author": "BarbosaDev",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^5.10.2",
     "body-parser": "^1.20.2",
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "prisma": "^5.10.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"

@@ -1,3 +1,0 @@
-services:
-  database:
-    image: "postgres:16.2-alpine3.18"

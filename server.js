@@ -11,22 +11,13 @@ app.set("view engine", "html");
 app.use(express.static(path.join(__dirname, "./public")));
 app.set("views", path.join(__dirname, "./views"));
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
-app.get("/produtos", (req, res) => {
-  res.render("produtos");
-});
-app.get("/cuidados", (req, res) => {
-  res.render("cuidados");
-});
+require("./routes/home")(app);
+require("./routes/produtos")(app);
+require("./routes/cuidados")(app);
+require("./routes/cadastrar")(app);
+require("./routes/login")(app);
 
-app.get("/cadastrar", (req, res) => {
-  res.render("cadastrar");
-});
-app.get("/login", (req, res) => {
-  res.render("login");
-});
+module.exports = app;
 
 app.listen(3000, () => {
   console.log("server running on port 3000!");
