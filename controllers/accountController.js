@@ -4,8 +4,6 @@ module.exports.renderAccount = async function (app, req, res) {
 
   const userModel = require("../models/userModel");
 
-  console.log(token);
-
   const user = await userModel.findUserID(id);
   let nome = user[0].name.split(" ");
   res.render("account", {
