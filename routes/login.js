@@ -1,5 +1,9 @@
 module.exports = function (app) {
+  const controllerLogin = require("../controllers/loginController");
   app.get("/login", (req, res) => {
-    require("../controllers/loginController").renderLogin(app, req, res);
+    controllerLogin.renderLogin(app, req, res);
+  });
+  app.post("/login", (req, res) => {
+    controllerLogin.login(app, req, res);
   });
 };

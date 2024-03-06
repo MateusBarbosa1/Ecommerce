@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "npm run services:up && nodemon server.js",
     "services:up": "docker compose -f infra/compose.yaml up -d",
     "services:down": "docker compose -f infra/compose.yaml down",
     "migrate": "npx prisma migrate dev"
@@ -13,9 +13,13 @@
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.10.2",
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
     "pg": "^8.11.3",
     "prisma": "^5.10.2"
   },

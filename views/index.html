@@ -41,12 +41,21 @@
           <img src="images/gv_logo-transparente.png" alt="" />
         </div>
         <div class="header-options">
+          <% if(token == false) { %>
           <a
             href="/cadastrar"
-            style="border-right: 1px solid white; padding-right: 10px"
-            >CADASTRE-SE</a
+            style="border-right: 2px solid white; padding-right: 25px"
+            >CADASTRAR</a
           >
           <a href="/login">INICIAR SESSÃO</a>
+          <% } else { %>
+          <a
+            href="/account"
+            style="border-right: 2px solid white; padding-right: 15px"
+            >OLA, <%= nome %></a
+          >
+          <a href="/sair">SAIR</a>
+          <% } %>
           <span class="material-symbols-outlined"> shopping_cart </span>
         </div>
         <div class="cart-mobile">
@@ -59,12 +68,22 @@
         <a href="/produtos">TODOS OS PRODUTOS</a>
         <a href="/cuidados">CUIDADOS</a>
         <div class="cad-log">
+          <% if(token == false) { %>
           <a
             href="/cadastrar"
             style="border-right: 2px solid white; padding-right: 25px"
             >CADASTRAR</a
           >
           <a href="/login">INICIAR SESSÃO</a>
+          <% } else { %>
+          <a
+            href="/account"
+            style="border-right: 2px solid white; padding-right: 15px"
+            >OLA, <%= nome %></a
+          >
+          <a href="/sair">SAIR</a>
+
+          <% } %>
         </div>
       </div>
       <!---->

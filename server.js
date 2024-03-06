@@ -1,9 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
+const cookieParser = require("cookie-parser");
+
 const path = require("path");
 const app = express();
 
+app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.engine("html", require("ejs").renderFile);
@@ -16,6 +19,8 @@ require("./routes/produtos")(app);
 require("./routes/cuidados")(app);
 require("./routes/cadastrar")(app);
 require("./routes/login")(app);
+require("./routes/account")(app);
+require("./routes/sair")(app);
 
 module.exports = app;
 
