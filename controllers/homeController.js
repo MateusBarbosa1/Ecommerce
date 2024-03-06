@@ -8,7 +8,11 @@ module.exports.renderHome = async function (app, req, res) {
     res.render("index", { token: false, nome: false });
   } else {
     const user = await userModel.findUserID(id);
-    let nome = user[0].name.split(" ");
-    res.render("index", { token: true, nome: nome[0] });
+    if (user == false) {
+      res.render("index", { token: false, nome: false });
+    } else {
+      let nome = user[0].name.split(" ");
+      res.render("index", { token: true, nome: nome[0] });
+    }
   }
 };

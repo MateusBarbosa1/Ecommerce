@@ -7,7 +7,7 @@ module.exports = function (app) {
       controllerLogin.verificarToken(req, res, next);
     },
     (req, res) => {
-      res.render("account");
+      require("../controllers/accountController").renderAccount(app, req, res);
     }
   );
 };

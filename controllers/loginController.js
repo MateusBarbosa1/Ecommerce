@@ -35,9 +35,7 @@ module.exports.login = async function (app, req, res) {
         message: "Não autorizado!",
       });
     } else {
-      const token = jwt.sign({ name: usuario.name }, SECRET, {
-        expiresIn: 2 * 60,
-      });
+      const token = jwt.sign({ name: usuario.name }, SECRET);
       res.cookie("id", usuario[0].id);
       res.cookie("token", token).redirect("/account");
       /*

@@ -1,11 +1,15 @@
 module.exports.renderCadastro = function (app, req, res) {
-  res.render("cadastrar");
+  res.render("cadastrar", { erro: false });
 };
 module.exports.cadastrarUsuario = async function (app, req, res) {
   const data = req.body;
 
   const userModel = require("../models/userModel");
-  await userModel.createUser(data);
+  const created = await userModel.createUser(data);
 
-  res.redirect("/login");
+  if (created == true) {
+    res.redirect("/login");
+  } else {
+    res.render("cadastrar", { erro: true });
+  }
 };

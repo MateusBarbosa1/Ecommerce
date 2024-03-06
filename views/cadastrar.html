@@ -120,6 +120,9 @@
 
     <section class="form-section">
       <form action="" method="post">
+        <% if(erro == true) { %>
+        <div class="alert alert-danger" role="alert">Houve algum erro!</div>
+        <% } %>
         <span>NOME COMPLETO</span>
         <input
           type="text"
