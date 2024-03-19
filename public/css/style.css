@@ -513,7 +513,7 @@ header .logo img {
 .criar-produto form {
   z-index: 102;
   display: none;
-  position: absolute;
+  position: fixed;
   flex-wrap: wrap;
   top: 50%;
   left: 50%;
@@ -553,6 +553,61 @@ header .logo img {
   color: black;
 }
 .criar-produto form input[type="submit"] {
+  outline: none;
+  color: white;
+  background: #597259;
+  border: none;
+  border-radius: 13px;
+  font-weight: bold;
+  padding: 10px 20px;
+  position: relative;
+  width: 95%;
+  margin: 3% 2.5%;
+}
+
+.products form {
+  z-index: 102;
+  display: none;
+  position: fixed;
+  flex-wrap: wrap;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  padding: 20px;
+  color: white;
+  background: rgb(73, 87, 73);
+}
+.products form h2 {
+  padding: 20px 30px;
+}
+.products form input {
+  outline: none;
+  color: white;
+  background: none;
+  border: 1px solid white;
+  padding: 10px 20px;
+  position: relative;
+  width: 95%;
+  margin: 1% 2.5%;
+}
+.products form input::placeholder {
+  color: white;
+}
+.products form select {
+  outline: none;
+  color: white;
+  background: none;
+  border: 1px solid white;
+  padding: 10px 20px;
+  position: relative;
+  width: 95%;
+  margin: 1% 2.5%;
+}
+.products form option {
+  color: black;
+}
+.products form input[type="submit"] {
   outline: none;
   color: white;
   background: #597259;

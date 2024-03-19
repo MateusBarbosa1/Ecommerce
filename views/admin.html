@@ -122,6 +122,7 @@
       <div class="info-web">
         <h2>Informações</h2>
         <p>Usuarios Cadastrados:<%= usersCreated %></p>
+        <p>Produtos Cadastrados:<%= productsCreated %></p>
       </div>
       <div class="criar-produto">
         <div class="filter-black"></div>
@@ -167,7 +168,66 @@
       </div>
     </section>
 
+    <h2 style="text-align: center; margin: 30px 0">Todos os Produtos</h2>
+
+    <section class="products">
+      <% for(let i = 0;i < products.length;i++) { %>
+      <form action="/admin/update-product/<%= products[i].id %>" method="post">
+        <h2>Produto</h2>
+        <input
+          type="text"
+          name="produto"
+          id="nome"
+          placeholder="Nome do Produto"
+          required
+        />
+        <input
+          type="number"
+          name="preco"
+          id="preco"
+          placeholder="Valor do Produto"
+          required
+        />
+        <input
+          type="text"
+          id="taxa"
+          name="taxaCartao"
+          placeholder="Taxa do Cartão"
+          required
+        />
+        <select name="tipoProduto" id="tipo">
+          <option value="brincos">Brincos</option>
+          <option value="pulseiras">Pulseiras</option>
+          <option value="colares">Colares</option>
+          <option value="relogios">Relógios</option>
+          <option value="chocker">Chocker</option>
+          <option value="pulseiras">Pulseiras e berloques</option>
+          <option value="porta-joias">Porta joias</option>
+          <option value="linhas-masculinas">Linhas Masculinas</option>
+        </select>
+        <input type="submit" value="Atualizar Produto" />
+      </form>
+      <div class="product">
+        <div class="img-product">
+          <img src="images/produtos/<%= products[i].image %>" alt="" />
+        </div>
+        <p class="tipo" style="display: none"><%= products[i].tipo %></p>
+        <p class="product-name"><%= products[i].nome %></p>
+        <h3 class="valor"><%= products[i].preco %></h3>
+        <p class="valor2"><%= products[i].taxa %></p>
+        <button class="update-button">ATUALIZAR</button>
+        <button
+          style="margin: 0 0 10px 0; background: rgb(179, 24, 24)"
+          onclick="window.location.href = '/admin/delete-product/<%= products[i].id %>'"
+        >
+          DELETAR
+        </button>
+      </div>
+      <% } %>
+    </section>
+
     <script src="js/mobile-menu.js"></script>
     <script src="js/adicionar-produto.js"></script>
+    <script src="js/atualizar-produto.js"></script>
   </body>
 </html>
