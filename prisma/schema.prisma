@@ -19,3 +19,11 @@ model User {
   phone     String 
   password  String
 }
+model Produtos {
+  id Int @id @default(autoincrement())
+  image String
+  nome String
+  preco Float
+  taxa String
+  tipo String
+}

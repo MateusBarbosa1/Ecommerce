@@ -22,6 +22,14 @@ async function createUser(data) {
     return false;
   }
 }
+async function allUsers() {
+  try {
+    const users = await prisma.user.findMany();
+    return users;
+  } catch (error) {
+    return false;
+  }
+}
 async function findUser(email) {
   try {
     const user = await prisma.user.findMany({ where: { email: email } });
@@ -44,4 +52,5 @@ module.exports = {
   createUser,
   findUser,
   findUserID,
+  allUsers,
 };

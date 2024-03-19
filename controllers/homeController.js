@@ -1,13 +1,14 @@
 module.exports.renderHome = async function (app, req, res) {
-  const token = req.cookies["token"];
-  const id = req.cookies["id"];
+  const { jwtDecode } = require("jwt-decode");
 
+  const token = req.cookies["token"];
   const userModel = require("../models/userModel");
 
   if (token === undefined) {
     res.render("index", { token: false, nome: false });
   } else {
-    const user = await userModel.findUserID(id);
+    const decodedToken = jwtDecode(token); // Correção aqui
+    const user = await userModel.findUserID(decodedToken.id);
     if (user == false) {
       res.render("index", { token: false, nome: false });
     } else {

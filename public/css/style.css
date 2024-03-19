@@ -474,6 +474,96 @@ header .logo img {
   margin-bottom: 0px;
   padding: 2px 0;
 }
+.info-admin {
+  padding-top: 250px;
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 5% 5% 5%;
+  text-align: center;
+}
+.info-web {
+  width: 50%;
+}
+.info-admin .info-web p {
+  padding-top: 10px;
+  margin: 0;
+}
+.criar-produto {
+  width: 50%;
+}
+.criar-produto button {
+  margin-top: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid black;
+}
+.filter-black {
+  display: none;
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  left: 50%;
+  z-index: 101;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.criar-produto form {
+  z-index: 102;
+  display: none;
+  position: absolute;
+  flex-wrap: wrap;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  padding: 20px;
+  color: white;
+  background: rgb(73, 87, 73);
+}
+.criar-produto form h2 {
+  padding: 20px 30px;
+}
+.criar-produto form input {
+  outline: none;
+  color: white;
+  background: none;
+  border: 1px solid white;
+  padding: 10px 20px;
+  position: relative;
+  width: 95%;
+  margin: 1% 2.5%;
+}
+.criar-produto form input::placeholder {
+  color: white;
+}
+.criar-produto form select {
+  outline: none;
+  color: white;
+  background: none;
+  border: 1px solid white;
+  padding: 10px 20px;
+  position: relative;
+  width: 95%;
+  margin: 1% 2.5%;
+}
+.criar-produto form option {
+  color: black;
+}
+.criar-produto form input[type="submit"] {
+  outline: none;
+  color: white;
+  background: #597259;
+  border: none;
+  border-radius: 13px;
+  font-weight: bold;
+  padding: 10px 20px;
+  position: relative;
+  width: 95%;
+  margin: 3% 2.5%;
+}
 @media screen and (max-width: 900px) {
   .dados {
     width: 100%;
@@ -630,6 +720,13 @@ header .logo img {
   }
 }
 @media screen and (max-width: 480px) {
+  .info-web {
+    width: 90%;
+  }
+  .criar-produto {
+    width: 90%;
+    margin-top: 30px;
+  }
   .product {
     width: 80%;
   }

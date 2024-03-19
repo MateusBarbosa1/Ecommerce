@@ -7,7 +7,7 @@ dotenv.config();
 const SECRET = process.env.SECRET;
 
 module.exports.renderLogin = function (app, req, res) {
-  res.render("login");
+  res.render("login", { erro: false });
 };
 module.exports.login = async function (app, req, res) {
   const data = req.body;
@@ -16,13 +16,7 @@ module.exports.login = async function (app, req, res) {
   const usuario = await userModel.findUser(data.email);
 
   if (usuario == false) {
-    return res.status(401).json({
-      statusCode: 401,
-      message: "Usuário não encontrado!",
-      data: {
-        email: req.body.email,
-      },
-    });
+    res.render("login", { erro: true });
   } else {
     const validacaoPassword = bcrypt.compareSync(
       data.senha,
@@ -30,23 +24,14 @@ module.exports.login = async function (app, req, res) {
     );
 
     if (!validacaoPassword) {
-      return res.status(401).json({
-        statusCode: 401,
-        message: "Não autorizado!",
-      });
+      res.render("login", { erro: true });
     } else {
-      const token = jwt.sign({ name: usuario.name }, SECRET);
-      res.cookie("id", usuario[0].id);
+      const token = jwt.sign(
+        { id: usuario[0].id, email: usuario[0].email },
+        SECRET
+      );
+
       res.cookie("token", token).redirect("/account");
-      /*
-      res.status(200).json({
-        statusCode: 200,
-        message: "Login realizado com sucesso!",
-        data: {
-          token,
-        },
-      });
-      */
     }
   }
 };
@@ -55,13 +40,8 @@ module.exports.verificarToken = function (req, res, next) {
   const tokenHeader = req.cookies["token"];
   const token = tokenHeader;
 
-  console.log(tokenHeader);
-
   if (!token) {
-    return res.status(401).json({
-      statusCode: 401,
-      message: "Não autorizado!",
-    });
+    res.redirect("/login");
   }
 
   try {

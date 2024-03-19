@@ -21,6 +21,7 @@ require("./routes/cadastrar")(app);
 require("./routes/login")(app);
 require("./routes/account")(app);
 require("./routes/sair")(app);
+require("./routes/admin")(app);
 
 module.exports = app;
 
